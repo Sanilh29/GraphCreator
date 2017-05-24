@@ -9,6 +9,7 @@ class Node{
  private:
   vector<Link> links;
  public:
+  vector<Link*> getLinks();
   Node(char newName);
   char name;
   bool remove(Node* toRemove);
@@ -19,4 +20,5 @@ class Node{
 struct Link{
   int weight;
   Node* next;
+  Node* last;
 };
