@@ -1,3 +1,5 @@
+#ifndef GRAPH_H
+#define GRAPH_H
 #include <vector>
 #include <iostream>
 #include "Node.h"
@@ -6,7 +8,7 @@ using namespace std;
 
 class Graph{
  private:
-  vector<Node*> Nodes;
+  vector<Node*> nodes;
   Node* nodeSearch(char data);
   
  public:
@@ -18,3 +20,5 @@ class Graph{
   void findPath(char data1, char data2);
 
 };
+
+#endif

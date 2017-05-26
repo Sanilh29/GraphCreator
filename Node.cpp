@@ -45,15 +45,16 @@ bool Node::add(Node* toAdd, int newWeight){
 
 void Node::print(){
   bool noLinks = true;
-  cout << name  << "::" << endl;
+  cout << name  << "::";
 
   for (vector<Link>:: iterator it= links.begin(); it != links.end(); it++){
-    cout << (*it).next->name << ":" << (*it).weight << endl;
+    cout << (*it).next->name << ":" << (*it).weight;
     noLinks = false;
   }
   if (noLinks){
-    cout << "There are no links." << endl;
+    cout << "has no links.";
   }
+  cout << endl;
 }
 
 vector<Link*> Node::getLinks(){
