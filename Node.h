@@ -1,3 +1,4 @@
+//Sanil Hattangadi, node header that contains the creation of methods and variables
 #include <vector>
 #include <iostream>
 
@@ -7,17 +8,19 @@ struct Link;
 
 class Node{
  private:
-  vector<Link> links;
+  //variables
+  vector<Link> links;//creating vector
  public:
-  vector<Link*> getLinks();
-  Node(char newName);
+  //method
+  vector<Link*> getLinks();//gets the links between vertexs
+  Node(char newName);//constructor
   char name;
-  bool remove(Node* toRemove);
-  bool add(Node* toAdd, int newWeight);
-  void print();
+  bool remove(Node* toRemove);//removes vertex
+  bool add(Node* toAdd, int newWeight);//adds vectex
+  void print();//prints it out
 };
 
-struct Link{
+struct Link{//gives link the qualities of weight, next, and last
   int weight;
   Node* next;
   Node* last;
